@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color</title>
+    <style>
+        .main{
+            width: 400px;
+            height: 200px;
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-shadow: 0 0 30px rgba(0 0 0.3);
+        }
+        button{
+            margin: 5px 120px ;
+            padding: 2em;
+            color: whitesmoke;
+            background-color: black;
+            box-shadow: 0 0 12px 4px rgba(0 0 0.3);
+        }
+        button:hover{
+            background-color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <h1 style="text-align:center">BackGroundColor:</h1>
+        <div class="color" style="text-align:center; font-size: 50px;">#FFFFFF</div>
+        <button class="btn">PickCOLOR</button>
+    </div>
+    <script>
+        let n=6;
+        let btn=document.querySelector(".btn");
+        let color=document.querySelector(".color");
+        let colorpicker=["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
+        
+        function randomcp(){
+            return Math.floor(Math.random()*colorpicker.length);
+        }
+        
+        btn.addEventListener('click',()=>{
+            let chex="";
+            for( let i=0; i<6;i++){
+                chex+= colorpicker[randomcp()];
+            }
+            document.body.style.backgroundColor="#"+chex;
+            color.textContent="#"+chex;
+        })
+    </script>
+</body>
+</html>
