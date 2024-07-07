@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>yooo</h1>
+    <span>toukyou</span><span class="res">  reservationn</span><br>
+    <button id="btn">click</button>
+    <div id="ty"></div>
+    <script>
+        let res=document.querySelector(".res");
+        let btn=document.getElementById("btn");
+        let ty=document.getElementById("ty");
+        btn.addEventListener("click",()=>{
+            let p=document.createElement("p");
+            p.textContent="thank you"
+            ty.appendChild(p);
+            res.innerHTML="reserved";
+            btn.remove();
+            
+            
+        })
+    </script>
+</body>
+</html>
