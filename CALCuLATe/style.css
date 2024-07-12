@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main{
+    background-color: blue;
+    width: 25vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 35vw;
+    grid-template-rows: repeat(6, .1fr);
+    box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.5);
+}
+.num{
+    box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 2px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.row5{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+.input{
+    padding: 2px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: large;
+    
+}
+h1{
+    font-style: italic;
+    font-weight: bolder;
+    margin-bottom: 10px;
+
+}
+.num{
+    width: 66px;
+}
